@@ -1,0 +1,32 @@
+ when we run the command "docker run hello-world" then some process occours at the backend and we get Hello from Docker! text displayed on our screen.
+
+ -------------------------------------How this happens?--------------------------------------
+
+ when we run the command "docker run hello-world" through CLI, that is, we are using Docker Client. Docker Client takes our command to Docker Server, this server checks the required image in image-cache. If it finds the image in image-cache, then it is easier and faster for the server to full-fill the demand of the client.
+ //now there won't be any message "image not found"
+
+----------------------But what if the image is not found in the image cache?-----------------
+
+Docker server goes to the Docker Hub and there it finds the required image this server then giver the output through docker client. 
+
+//"purpose of the hello-world image is just to write the output - Hello from docker!"
+
+Docker Hub is the free service where many images are available
+
+
+                                   YOUR COMPUTER
+                                 ____ \  
+                                |     /  Docker Client                     DOCKER HUB
+  COMMAND                       |              |                        _____________________
+docker run hello-world-----------              |           -------------|-Hello-world       |
+                                              \ /          |            | redis             |
+                                        Docker Server-----------------> |         etc.      |
+                                              |  or        |            |                   |
+                                              |            |            |                   |
+                                             \ /           |            |                   |
+                                          Image Cache      |            |                   |
+                                        |--------------|   |            |___________________|
+                                        |Hello-world<--|----
+                                        |              |
+                                        |              |
+                                        |--------------|
