@@ -356,5 +356,8 @@ docker kill container-id //instant reply by giving container-id
 
 ```bash
 docker pull <docker-image>
-
+docker run <image-name>
+docker ps 
+docker images
 ```
+## Write here
