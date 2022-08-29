@@ -15,6 +15,7 @@
 - [Remove stopped containers](#remove-stopped-containers)
 - [Retrieving logs output](#retrieving-logs-output)
 - [Stopping container](#stopping-container)
+- [Docker pull and push] (#docker-pull-and-push)
 
 
 
@@ -348,5 +349,9 @@ docker ps //to get container-id
 docker stop container-id //will take 10 sec. and return container-id
 docker start container-id
 docker kill container-id //instant reply by giving container-id
+
+
+
+# Docker pull and push
 
 
