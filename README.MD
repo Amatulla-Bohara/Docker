@@ -15,7 +15,7 @@
 - [Remove stopped containers](#remove-stopped-containers)
 - [Retrieving logs output](#retrieving-logs-output)
 - [Stopping container](#stopping-container)
-- [Docker pull and push] (#docker-pull-and-push)
+- [Docker pull and push](#docker-pull-and-push)
 
 
 
@@ -354,4 +354,7 @@ docker kill container-id //instant reply by giving container-id
 
 # Docker pull and push
 
+```bash
+docker pull <docker-image>
 
+```
