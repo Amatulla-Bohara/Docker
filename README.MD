@@ -351,7 +351,6 @@ docker start container-id
 docker kill container-id //instant reply by giving container-id
 
 
-
 # Docker pull and push
 
 ```bash
@@ -360,4 +359,14 @@ docker run <image-name>
 docker ps 
 docker images
 ```
-## Write here
+
+# Multi-command Containers
+
+Let's run redis outside the container that is on our system. To do so we write
+```bash
+redis-server
+```
+To inspect the data inside of this server we need a redis client. For that we open new terminal and write
+```bash
+redis-cli
+```
