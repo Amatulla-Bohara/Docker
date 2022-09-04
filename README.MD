@@ -16,7 +16,8 @@
 - [Retrieving logs output](#retrieving-logs-output)
 - [Stopping container](#stopping-container)
 - [Docker pull and push](#docker-pull-and-push)
-
+- [Multi-command Containers](#Multi-command-Containers)
+- [Executing command in running container](#Executing-command-in-running-container)
 
 
 # What and why
@@ -369,4 +370,18 @@ redis-server
 To inspect the data inside of this server we need a redis client. For that we open new terminal and write
 ```bash
 redis-cli
+```
+
+# Executing command in running container
+
+As we have installed redis on the container now we need to run redis-cli on same container, so to that we can use command
+
+```bash 
+docker exec -it <container Id> <command>
+```
+
+perticulatly for redis-client we can use the following command-
+
+```bash
+docker exec -it <container Id> redis-cli
 ```
