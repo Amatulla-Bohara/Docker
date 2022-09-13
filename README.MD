@@ -122,7 +122,7 @@ Docker server goes to the Docker Hub and there it finds the required image this 
 
 //"purpose of the hello-world image is just to write the output - Hello from docker!"
 
-Docker Hub is the free service where many images are available
+Docker Hub is the free service where many images are available either free or paid as well
 
 
                                    YOUR COMPUTER
