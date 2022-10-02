@@ -18,6 +18,10 @@
 - [Docker pull and push](#docker-pull-and-push)
 - [Multi-command Containers](#Multi-command-Containers)
 - [Executing command in running container](#Executing-command-in-running-container)
+- [Purpose of IT flag](#Purpose-of-IT-flag)
+- [Getting command prompt in the container](#Getting-command-prompt-in-the-container)
+- [Starting with shell](#starting-with-a-shell)
+- [Container isolation](#Container-isolation)
 
 
 # What and why
@@ -386,3 +390,51 @@ perticulatly for redis-client we can use the following command-
 ```bash
 docker exec -it <container Id> redis-cli
 ```
+
+# Purpose of IT flag
+
+without using -it flag we will be cicked back to the terminal.
+every process has 3 channels-  input(stdin), output(stdout) and stderr.
+stdin - communication from terminal to process is done through stdin. while we type into the terminal it goes to process.
+stdout - communicate from process to the terminal. processed output is displayed on the screen through this.
+stderr - it also displays the output if any error has occoured while processing.
+
+-it are two flags that is -i and -t
+-i is used to attach terminal to the stdin of the process
+-t is used to get nice/formated terminal wherein we can type the command in structured manner. Try using without -t flag and you will get better.
+
+# Getting command prompt in the container
+
+To get shell/terminal exces to your runner container as we cannot write "docker exec" everytime we use-
+
+```bash
+docker exec -it <container id> sh
+```
+using this you get excess to the terminal in container and now we can write linux commands over there and can execute docker-cli in it.
+
+note - ctrl+c or ctrl+d or exit to get out of the shell
+command processors = bash, powershell, zsh, sh
+
+# Starting with a shell 
+
+not necessarly we need to use sh with exec command only : "docker exec -it <container Id> sh" but we can have 
+```bash
+docker run it <container-name> sh
+```
+as it gives empty container with the access to shell.
+
+# Container isolation
+
+Between two continers there is no file sharing-
+for example lets open two terminal and create two containers on the seperate terminals with same configuration now lets create file1 in 1st container and check if it is created on the 2nd conatiner or not and same with the 2nd container and now you get the clear result that the containers file system is isolated.
+
+# BUILDING CUSTOM IMAGES THROUGH DOCKER SERVER
+# Creating docker image
+
+we are gona create Dockerfile : configuration to define how our containers should behave
+dockerfile goes through docker-client -> docker-server -> usable image
+
+### creating a docker file
+1. specify a base image
+2. Run some commands to install additional programs
+3. specify a command to run on conatiner startup
