@@ -444,6 +444,7 @@ dockerfile goes through docker-client -> docker-server -> usable image
 3. specify a command to run on conatiner startup
 
 # Building dockerfile 
+
 GOAL - create an image that runs docker-server
 
 1. mkdir folder-name
@@ -457,3 +458,21 @@ GOAL - create an image that runs docker-server
 6. docker build .
    //you will se successfully build image-id
 7. docker run <image-id>
+
+# What's the base image?
+writing a dockerfile  ==  given an computer with no OS and being told to install chrome
+
+### How to install chrome on computer with no OS?
+
+1. Install an os        --       specify a base image
+2. start up your default browser   --    
+3. navigate to chrome.google.com   --
+4. Download installer              -- run commands to install additional programs
+5. open file/folder explorer       --
+6. execute chrome_installer.exe    --
+7. execute chrome.exe              -- command to run on startup
+
+### why do we use alpine as base image?
+then comes the question why do you use windows, macos, ubuntu?
+They come with the preinstalled programs that are useful for you
+alpine already has apk (android application package) in it used to directly install and run redis for us.
