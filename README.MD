@@ -25,6 +25,7 @@
 - [Building custom image through docker server](#Building-custom-image-through-docker-server)
 - [Creating docker image](#Creating-docker-image)
 - [Building dockerfile](#Building-dockerfile)
+- [What's the base image?](#What's-the-base-image?)
 
 
 # What and why
