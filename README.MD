@@ -22,8 +22,9 @@
 - [Getting command prompt in the container](#Getting-command-prompt-in-the-container)
 - [Starting with shell](#starting-with-a-shell)
 - [Container isolation](#Container-isolation)
-- [BUILDING CUSTOM IMAGE THROUGH DOCKER SERVER](#BUILDING-CUSTOM-IMAGE-THROUGH-DOCKER-SERVER)
+- [Building custom image through docker server](#Building-custom-image-through-docker-server)
 - [Creating docker images](#Creating-docker-images)
+- [Building dockerfile](#Building-dockerfile)
 
 
 # What and why
@@ -430,7 +431,7 @@ as it gives empty container with the access to shell.
 Between two continers there is no file sharing-
 for example lets open two terminal and create two containers on the seperate terminals with same configuration now lets create file1 in 1st container and check if it is created on the 2nd conatiner or not and same with the 2nd container and now you get the clear result that the containers file system is isolated.
 
-# BUILDING CUSTOM IMAGES THROUGH DOCKER SERVER
+# Building custom image through docker server
 # Creating docker image
 
 we are gona create Dockerfile : configuration to define how our containers should behave
@@ -440,3 +441,18 @@ dockerfile goes through docker-client -> docker-server -> usable image
 1. specify a base image
 2. Run some commands to install additional programs
 3. specify a command to run on conatiner startup
+
+# Building dockerfile 
+GOAL - create an image that runs docker-server
+
+1. mkdir folder-name
+2. cd folder-name
+3. code . (It will move to vs code only if created a path)
+4. create a Dockerfile 
+5. write the steps to create dockerfile
+   1. FROM alpine
+   2. RUN apk add --update redis
+   3. CMD["redis-server"]
+6. docker build .
+   //you will se successfully build image-id
+7. docker run <image-id>
