@@ -23,7 +23,7 @@
 - [Starting with shell](#starting-with-a-shell)
 - [Container isolation](#Container-isolation)
 - [Building custom image through docker server](#Building-custom-image-through-docker-server)
-- [Creating docker images](#Creating-docker-images)
+- [Creating docker image](#Creating-docker-image)
 - [Building dockerfile](#Building-dockerfile)
 
 
