@@ -26,7 +26,7 @@
 - [Creating docker image](#Creating-docker-image)
 - [Building dockerfile](#Building-dockerfile)
 - [What's the base image?](#What's-the-base-image?)
-
+- [The build process in detail](#The-build-process-in-detail)
 
 # What and why
 ### Why is Docker
