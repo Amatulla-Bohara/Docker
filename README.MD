@@ -476,3 +476,5 @@ writing a dockerfile  ==  given an computer with no OS and being told to install
 then comes the question why do you use windows, macos, ubuntu?
 They come with the preinstalled programs that are useful for you
 alpine already has apk (android application package) in it used to directly install and run redis for us.
+
+# The build process in detail
